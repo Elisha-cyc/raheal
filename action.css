@@ -1,0 +1,477 @@
+/* Global Styles */
+:root {
+    --primary-color: #2e7d32;
+    --secondary-color: #81c784;
+    --accent-color: #ffab00;
+    --dark-color: #263238;
+    --light-color: #f5f5f5;
+    --text-color: #333;
+    --text-light: #666;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+:root {
+    --primary-color: #2c7873;
+    --secondary-color: #6fb98f;
+    --dark-color: #02abad;
+    --light-color: #f8f9fa;
+    --accent-color: #ff7e67;
+    --text-color: #04f82d;
+    --text-light: #666666;
+}
+/* Header */
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-align: center;
+    padding: 60px 0;
+    margin-bottom: 40px;
+}
+header {
+    background: linear-gradient(135deg, var(--dark-color), var(--primary-color));
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Navigation */
+nav {
+    background: linear-gradient(135deg, var(--dark-color), var(--primary-color));
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* CTA Section */
+.cta-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.cta-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.cta-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.cta-content p {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+/* Donation Form */
+.donation-form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.donation-form h3 {
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.donation-amounts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.amount-btn {
+    background: var(--light-color);
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+
+.amount-btn:hover {
+    background: var(--secondary-color);
+    color: white;
+    border-color: var(--secondary-color);
+}
+
+#custom-amount {
+    flex: 1;
+    min-width: 100px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.payment-info {
+    margin: 25px 0;
+}
+
+.payment-info input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.card-details {
+    display: flex;
+    gap: 15px;
+}
+
+.card-details input {
+    flex: 1;
+}
+
+#donate-btn {
+    width: 100%;
+    padding: 15px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#donate-btn:hover {
+    background: #1b5e20;
+}
+
+.secure-text {
+    text-align: center;
+    margin-top: 10px;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* Tree Visualization */
+.tree-visualization {
+    flex: 1;
+    min-width: 300px;
+}
+
+.tree-visualization h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.map-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    height: 100%;
+}
+
+.world-map {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/World_map_-_low_resolution.svg/1200px-World_map_-_low_resolution.svg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.tree {
+    position: absolute;
+    color: var(--primary-color);
+    font-size: 20px;
+    transform: translate(-50%, -50%);
+    animation: grow 0.5s ease-out;
+}
+
+@keyframes grow {
+    from {
+        transform: translate(-50%, -50%) scale(0);
+    }
+    to {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.tree-counter {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.tree-counter span {
+    font-size: 1.5rem;
+}
+
+/* Infographic Section */
+.infographic-section {
+    margin: 60px 0;
+}
+
+.infographic-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+.infographic {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.info-item {
+    flex: 1;
+    min-width: 200px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.info-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.info-text h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.info-text p {
+    color: var(--text-light);
+}
+
+/* Country Progress Section */
+.country-progress {
+    margin: 60px 0;
+}
+
+.country-progress h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.country-progress p {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--text-light);
+}
+
+.chart-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.chart-legend {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.legend-color {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+}
+
+.emissions {
+    background-color: #e53935;
+}
+
+.renewable {
+    background-color: #43a047;
+}
+
+.policy {
+    background-color: #1e88e5;
+}
+
+/* Footer */
+footer {
+    background: var(--dark-color);
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 60px;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.tree-animation {
+    margin: 30px 0;
+    color: var(--primary-color);
+}
+
+.tree-animation i {
+    font-size: 4rem;
+    animation: bounce 1s;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+#share-btn {
+    padding: 12px 25px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 20px;
+}
+
+#share-btn:hover {
+    background: #1b5e20;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .cta-section {
+        flex-direction: column;
+    }
+    
+    .info-item {
+        min-width: 100%;
+    }
+}

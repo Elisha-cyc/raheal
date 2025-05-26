@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn About Climate Change</title>
+    <link rel="stylesheet" href="learn.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Climate Change Education</h1>
+            <p>Understanding the crisis and how we can solve it together</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#what-is">What is Climate Change?</a></li>
+                <li><a href="#effects">Effects</a></li>
+                <li><a href="#causes">Causes</a></li>
+                <li><a href="#solutions">Solutions</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="what-is" class="info-section">
+            <h2><i class="fas fa-globe"></i> What is Climate Change?</h2>
+            <div class="content-box">
+                <img src="https://images.unsplash.com/photo-1615796153287-98eacf0abb13?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Climate change illustration">
+                <div class="text-content">
+                    <p>Climate change refers to significant, long-term changes in the global climate. The global climate is the connected system of sun, earth and oceans, wind, rain and snow, forests, deserts and savannas, and everything people do.</p>
+                    <p>The climate has always varied naturally, but the term climate change is now commonly used to refer to the recent and rapid changes caused by human activities, primarily the burning of fossil fuels which releases greenhouse gases into the atmosphere.</p>
+                    <button class="learn-more" data-target="what-is-more">Learn More</button>
+                </div>
+            </div>
+            <div id="what-is-more" class="more-content hidden">
+                <h3>Key Facts About Climate Change</h3>
+                <ul>
+                    <li>The Earth's average temperature has risen about 1.2°C since the late 19th century</li>
+                    <li>The last decade (2011-2020) was the warmest on record</li>
+                    <li>Global sea level rose about 20 cm (8 inches) in the last century</li>
+                    <li>Arctic ice is declining at a rate of 12.85% per decade</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="effects" class="info-section">
+            <h2><i class="fas fa-exclamation-triangle"></i> Effects of Climate Change</h2>
+            <div class="effects-grid">
+                <div class="effect-card">
+                    <div class="effect-icon"><i class="fas fa-temperature-high"></i></div>
+                    <h3>Rising Temperatures</h3>
+                    <p>Global temperatures are increasing, leading to more frequent and intense heatwaves.</p>
+                </div>
+                <div class="effect-card">
+                    <div class="effect-icon"><i class="fas fa-water"></i></div>
+                    <h3>Sea Level Rise</h3>
+                    <p>Melting glaciers and thermal expansion of oceans are causing sea levels to rise.</p>
+                </div>
+                <div class="effect-card">
+                    <div class="effect-icon"><i class="fas fa-wind"></i></div>
+                    <h3>Extreme Weather</h3>
+                    <p>More intense hurricanes, droughts, and heavy precipitation events.</p>
+                </div>
+                <div class="effect-card">
+                    <div class="effect-icon"><i class="fas fa-leaf"></i></div>
+                    <h3>Ecosystem Changes</h3>
+                    <p>Shifting habitats and loss of biodiversity as species struggle to adapt.</p>
+                </div>
+            </div>
+            <button class="learn-more" data-target="effects-more">Show More Effects</button>
+            <div id="effects-more" class="more-content hidden">
+                <h3>Additional Impacts</h3>
+                <ul>
+                    <li>Ocean acidification harming marine life</li>
+                    <li>Increased health risks from heat and disease</li>
+                    <li>Disruptions to food production</li>
+                    <li>Economic impacts from damage to infrastructure</li>
+                    <li>Climate refugees as people are displaced</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="causes" class="info-section">
+            <h2><i class="fas fa-industry"></i> Causes of Climate Change</h2>
+            <div class="causes-chart">
+                <div class="chart-container">
+                    <canvas id="causesChart"></canvas>
+                </div>
+                <div class="causes-list">
+                    <h3>Main Human Causes</h3>
+                    <ul>
+                        <li>Burning fossil fuels (coal, oil, gas)</li>
+                        <li>Deforestation</li>
+                        <li>Industrial processes</li>
+                        <li>Agriculture (especially livestock)</li>
+                        <li>Waste management</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-container">
+                <h3>CO2 Levels Over Time</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">Pre-Industrial</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">280 ppm CO2</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">1950</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">310 ppm CO2</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2023</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">420 ppm CO2</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="solutions" class="info-section">
+            <h2><i class="fas fa-lightbulb"></i> Solutions to Climate Change</h2>
+            <div class="solutions-accordion">
+                <div class="accordion-item">
+                    <button class="accordion-btn">Renewable Energy <i class="fas fa-chevron-down"></i></button>
+                    <div class="accordion-content">
+                        <p>Transitioning from fossil fuels to renewable energy sources like solar, wind, and hydroelectric power can dramatically reduce greenhouse gas emissions. Many countries are already making significant progress in this area.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-btn">Energy Efficiency <i class="fas fa-chevron-down"></i></button>
+                    <div class="accordion-content">
+                        <p>Improving energy efficiency in buildings, transportation, and industry can reduce energy demand. This includes better insulation, LED lighting, and more efficient appliances and vehicles.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-btn">Sustainable Transportation <i class="fas fa-chevron-down"></i></button>
+                    <div class="accordion-content">
+                        <p>Expanding public transit, promoting electric vehicles, and creating bike-friendly cities can reduce emissions from transportation, which is a major contributor to climate change.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-btn">Forest Conservation <i class="fas fa-chevron-down"></i></button>
+                    <div class="accordion-content">
+                        <p>Protecting existing forests and planting new trees helps absorb CO2 from the atmosphere. Deforestation accounts for about 10% of global emissions.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-btn">Sustainable Agriculture <i class="fas fa-chevron-down"></i></button>
+                    <div class="accordion-content">
+                        <p>Practices like regenerative farming, reduced meat consumption, and better soil management can reduce emissions from agriculture while improving food security.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="personal-actions">
+                <h3>What You Can Do</h3>
+                <div class="actions-grid">
+                    <div class="action-card">
+                        <i class="fas fa-bolt"></i>
+                        <p>Reduce energy use at home</p>
+                    </div>
+                    <div class="action-card">
+                        <i class="fas fa-car"></i>
+                        <p>Drive less, walk/bike more</p>
+                    </div>
+                    <div class="action-card">
+                        <i class="fas fa-utensils"></i>
+                        <p>Eat more plant-based meals</p>
+                    </div>
+                    <div class="action-card">
+                        <i class="fas fa-recycle"></i>
+                        <p>Reduce, reuse, recycle</p>
+                    </div>
+                    <div class="action-card">
+                        <i class="fas fa-vote-yea"></i>
+                        <p>Vote for climate action</p>
+                    </div>
+                    <div class="action-card">
+                        <i class="fas fa-comments"></i>
+                        <p>Talk about climate change</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="quiz" class="info-section">
+            <h2><i class="fas fa-question-circle"></i> Climate Change Quiz</h2>
+            <div class="quiz-container">
+                <div id="quiz-intro">
+                    <p>Test your knowledge about climate change with this short quiz. See how much you've learned!</p>
+                    <button id="start-quiz" class="btn">Start Quiz</button>
+                </div>
+                <div id="quiz-questions" class="hidden">
+                    <div class="quiz-progress">
+                        Question <span id="current-question">1</span> of <span id="total-questions">5</span>
+                    </div>
+                    <div id="question-container"></div>
+                    <div id="options-container" class="options-grid"></div>
+                    <button id="next-question" class="btn hidden">Next Question</button>
+                </div>
+                <div id="quiz-results" class="hidden">
+                    <h3>Your Quiz Results</h3>
+                    <div id="score-display"></div>
+                    <div id="result-feedback"></div>
+                    <button id="retake-quiz" class="btn">Retake Quiz</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+                          
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="learn.html">Learn</a></li>
+                    <li><a href="action.html">Action</a></li>
+                    <li><a href="media.html">Media</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        <div class="container">
+            <p>Learn more about climate change from these resources:</p>
+            <ul class="resources">
+                <li><a href="https://www.ipcc.ch/" target="_blank">IPCC (Intergovernmental Panel on Climate Change)</a></li>
+                <li><a href="https://climate.nasa.gov/" target="_blank">NASA Climate Change</a></li>
+                <li><a href="https://www.un.org/en/climatechange" target="_blank">UN Climate Action</a></li>
+            </ul>
+            <p class="copyright">&copy; 2023 Climate Change Education. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="learn.js"></script>
+</body>
+</html>
