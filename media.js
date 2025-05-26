@@ -286,3 +286,143 @@ document.addEventListener('DOMContentLoaded', function() {
         section.style.transition = 'all 0.3s ease';
     });
 });
+document.addEventListener('DOMContentLoaded', function() {
+    // Image Gallery Carousel Functionality
+    const galleryTrack = document.querySelector('.gallery-track');
+    const slides = Array.from(document.querySelectorAll('.gallery-slide'));
+    const nextBtn = document.getElementById('next-btn');
+    const prevBtn = document.getElementById('prev-btn');
+    const dotsContainer = document.querySelector('.gallery-dots');
+    
+    // Set up gallery
+    let currentIndex = 0;
+    const slideCount = slides.length;
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    
+    // Arrange slides horizontally
+    slides.forEach((slide, index) => {
+        slide.style.left = `${index * 100}%`;
+    });
+    
+    // Create dots for navigation
+    function createDots() {
+        slides.forEach((_, index) => {
+            const dot = document.createElement('button');
+            dot.classList.add('gallery-dot');
+            if (index === 0) dot.classList.add('active');
+            dot.setAttribute('data-index', index);
+            dotsContainer.appendChild(dot);
+        });
+    }
+    
+    createDots();
+    const dots = Array.from(document.querySelectorAll('.gallery-dot'));
+    
+    // Update gallery position
+    function moveToSlide(index) {
+        galleryTrack.style.transform = `translateX(-${index * 100}%)`;
+        currentIndex = index;
+        
+        // Update active dot
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[currentIndex].classList.add('active');
+    }
+    
+    // Next slide
+    nextBtn.addEventListener('click', function() {
+        if (currentIndex === slideCount - 1) {
+            moveToSlide(0);
+        } else {
+            moveToSlide(currentIndex + 1);
+        }
+    });
+    
+    // Previous slide
+    prevBtn.addEventListener('click', function() {
+        if (currentIndex === 0) {
+            moveToSlide(slideCount - 1);
+        } else {
+            moveToSlide(currentIndex - 1);
+        }
+    });
+    
+    // Dot navigation
+    dotsContainer.addEventListener('click', function(e) {
+        if (e.target.classList.contains('gallery-dot')) {
+            const index = parseInt(e.target.getAttribute('data-index'));
+            moveToSlide(index);
+        }
+    });
+    
+    // Auto-advance slides every 5 seconds
+    let slideInterval = setInterval(() => {
+        if (currentIndex === slideCount - 1) {
+            moveToSlide(0);
+        } else {
+            moveToSlide(currentIndex + 1);
+        }
+    }, 5000);
+    
+    // Pause auto-advance on hover
+    const galleryContainer = document.querySelector('.gallery-container');
+    galleryContainer.addEventListener('mouseenter', () => {
+        clearInterval(slideInterval);
+    });
+    
+    galleryContainer.addEventListener('mouseleave', () => {
+        slideInterval = setInterval(() => {
+            if (currentIndex === slideCount - 1) {
+                moveToSlide(0);
+            } else {
+                moveToSlide(currentIndex + 1);
+            }
+        }, 5000);
+    });
+    
+    // Responsive video resizing
+    function resizeVideos() {
+        const videoWrappers = document.querySelectorAll('.video-wrapper');
+        videoWrappers.forEach(wrapper => {
+            const iframe = wrapper.querySelector('iframe');
+            const width = wrapper.clientWidth;
+            const height = width * 0.5625; // 16:9 aspect ratio
+            iframe.style.height = `${height}px`;
+        });
+    }
+    
+    window.addEventListener('load', resizeVideos);
+    window.addEventListener('resize', resizeVideos);
+    
+    // Smooth scrolling for navigation
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Add animation to fact cards when they come into view
+    const factCards = document.querySelectorAll('.fact-card');
+    
+    function checkIfInView() {
+        factCards.forEach(card => {
+            const cardTop = card.getBoundingClientRect().top;
+            const cardBottom = card.getBoundingClientRect().bottom;
+            
+            if (cardTop < window.innerHeight && cardBottom > 0) {
+                card.classList.add('animate');
+            }
+        });
+    }
+    
+    window.addEventListener('load', checkIfInView);
+    window.addEventListener('scroll', checkIfInView);
+});
