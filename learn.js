@@ -1,39 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('nav a').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            window.scrollTo({
-                top: targetElement.offsetTop - 70,
-                behavior: 'smooth'
-            });
-            
-            // Update active link
-            document.querySelectorAll('nav li a').forEach(link => {
-                link.classList.remove('active');
-            });
-            this.classList.add('active');
-        });
-    });
-
-    // Learn More buttons functionality
-    document.querySelectorAll('.learn-more').forEach(button => {
-        button.addEventListener('click', function() {
-            const targetId = this.getAttribute('data-target');
-            const targetElement = document.getElementById(targetId);
-            
-            if (targetElement.classList.contains('hidden')) {
-                targetElement.classList.remove('hidden');
-                this.textContent = 'Show Less';
-            } else {
-                targetElement.classList.add('hidden');
-                this.textContent = 'Learn More';
-            }
-        });
-    });
 
     // Accordion functionality
     document.querySelectorAll('.accordion-btn').forEach(button => {
@@ -282,4 +246,3 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-});
