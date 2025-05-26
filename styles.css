@@ -136,8 +136,9 @@ nav ul li a:hover, nav ul li a.active {
     display: flex;
     align-items: center;
     position: relative;
-    margin-top: 70px;
+    margin: 0 auto;
     text-align: center;
+    
 }
 
 .hero-overlay {
@@ -159,11 +160,13 @@ nav ul li a:hover, nav ul li a.active {
 .hero-content h2 {
     font-size: 3rem;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 30px;
+    text-align: center;
 }
 
 /* Stats Section */
